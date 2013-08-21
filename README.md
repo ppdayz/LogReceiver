@@ -35,7 +35,7 @@
     <a href="https://sourceforge.net/projects/logreceiver/" target="_self" title="">Download binaries from sourceforge</a>
 </h4>
 <h4 style="white-space: normal; margin: 1em 0px 15px; line-height: 1.7; font-size: 1.2em; padding: 0px; cursor: text; position: relative; color: rgb(51, 51, 51); font-family: Helvetica, arial, freesans, clean, sans-serif;">
-    <a href="http://leadon-pub.vicp.cc/logreceiver.exe" target="_self" title="">Download binaries from&nbsp;Leadontec WebSite</a>
+    <a href="http://leadon-pub.vicp.cc/LogReceiver.exe" target="_self" title="">Download binaries from&nbsp;Leadontec WebSite</a>
 </h4>
 <p>
     <br/>
