@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/pause.png</file>
+        <file>res/start.png</file>
+        <file>res/font_Minus.png</file>
+        <file>res/font_Plus.png</file>
+        <file>res/debug.png</file>
+        <file>res/error.png</file>
+        <file>res/info.png</file>
+        <file>res/notice.png</file>
+        <file>res/clear.png</file>
+        <file>res/linked.png</file>
+        <file>res/refresh.png</file>
+        <file>res/unlinked.png</file>
+        <file>res/next.png</file>
+        <file>res/previous.png</file>
+        <file>res/palette.png</file>
+        <file>res/go_down.png</file>
+        <file>res/link.png</file>
+        <file>res/open_last.png</file>
+        <file>res/save .png</file>
+        <file>res/settings.png</file>
+        <file>res/logo.png</file>
+    </qresource>
+</RCC>
