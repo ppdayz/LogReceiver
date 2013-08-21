@@ -76,8 +76,8 @@ void SettingsDialog::on_font_chooser_clicked()
 
 void SettingsDialog::on_buttonBox_accepted()
 {
-    QSettings settings(SETTINGS_INI_FILE, QSettings::IniFormat);
-
+//    QSettings settings(SETTINGS_INI_FILE, QSettings::IniFormat);
+    QSettings settings(QSettings::SystemScope, qApp->organizationName(), qApp->applicationName(), this);
     settings.beginGroup("color_settings");
 
     settings.setValue("filter_fg_color",  ui->filter_fg_color->currentColor());

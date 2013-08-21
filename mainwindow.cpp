@@ -5,6 +5,7 @@
 #include <QScrollBar>
 #include <QFile>
 #include <QDateTime>
+#include <QTimer>
 
 #include "settingsdialog.h"
 
@@ -74,6 +75,12 @@ void MainWindow::timerEvent(QTimerEvent *event)
 
     if(m_auto_conn_timerID == event->timerId()){
         on_actionLink_triggered();
+        killTimer(m_auto_conn_timerID);
+        m_auto_conn_timerID = 0;
+
+        if(m_auto_conn_timerID == 0){
+            m_auto_conn_timerID = startTimer(30*1000);
+        }
     }
 }
 
@@ -175,8 +182,9 @@ void MainWindow::netReceiverStateChanged(QAbstractSocket::SocketState state)
         break;
     case QAbstractSocket::UnconnectedState:
         if(m_auto_conn_timerID == 0){
-            m_auto_conn_timerID = startTimer(60*1000);
+            m_auto_conn_timerID = startTimer(5000);
         }
+
         textBrowser->append(QString("%1 Disconnect from the server, will try to link again!")
                             .arg(QDateTime::currentDateTime().toString("yyyyMMdd hh:mm:ss")));
     case QAbstractSocket::ConnectingState:
@@ -228,9 +236,10 @@ void MainWindow::calcShowLVL()
 
 void MainWindow::loadSettingFromIni()
 {
-    QSettings settings(SETTINGS_INI_FILE, QSettings::IniFormat);
+    QSettings settings(QSettings::SystemScope, qApp->organizationName(), qApp->applicationName(), this);
 
-    // 初始化配色设置
+    textBrowser->append(QString("Settings is stored in %1").arg(settings.fileName()));
+    // 初始化配色设置 */
 
     settings.beginGroup("color_settings");
 

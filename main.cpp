@@ -4,10 +4,13 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
+    QApplication app(argc, argv);
+    app.setOrganizationName("Leadontec");
+    app.setApplicationName("LogReceiver");
+    app.setOrganizationDomain("Leadon Ltd.");
 
     MainWindow w;
     w.show();
-    return a.exec();
+    return app.exec();
 }
 

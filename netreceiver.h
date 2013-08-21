@@ -17,12 +17,10 @@ public:
     void connectToLogForwarder(const QString &host = "192.168.1.2", int port = 12345);
 signals:
     void singleLogComing(const QString &log);
-//    void netReceiverStateChanged(QAbstractSocket::SocketState state);
 public slots:
 
 private slots:
     void progressPandingData();
-//    void slotNetError(QAbstractSocket::SocketError error);
 
 private:
     char localBuff[CACHE_DATA_LEN];
